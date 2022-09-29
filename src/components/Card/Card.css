@@ -1,0 +1,31 @@
+.CardContent {
+    background-color: #fbfbfb;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+}
+
+.CardIcon {
+    margin: 32px;
+    border-radius: 6px;
+    width: 60px;
+    height: 60px;
+}
+
+.CardInfos {
+    margin: 32px 32px 32px 24px;
+}
+
+.CardData {
+    font-weight: 700;
+    font-size: 20px;
+    font-family: Roboto;
+}
+.CardTitle {
+    font-weight: 500;
+    font-size: 14px;
+    font-family: Roboto;
+    color: #74798c;
+    text-align: left;
+}
