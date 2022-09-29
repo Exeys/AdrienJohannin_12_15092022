@@ -1,0 +1,65 @@
+.DashboardContent {
+    display: flex;
+    margin-top: 77px;
+}
+
+.Cards > * {
+    margin: 0 39px 39px 31px;
+}
+
+.Hello {
+    text-align: left;
+    margin-left: 107px;
+    margin-top:68px;
+    gap:41px;
+}
+
+.HelloName {
+    font-size: 48px;
+    font-weight: 500;
+    font-family: Roboto;
+}
+
+.HelloCheers {
+    margin-top:41px;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Roboto;
+}
+
+.SessionsContainer{
+    display: flex;
+    align-items: flex-end;
+    border-radius: 5px;
+    width: 258px;
+    height: 263px;
+    background-color: #ff0000;
+}
+
+.TrackerContainer{
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    width: 258px;
+    height: 263px;
+    background-color: rgba(40, 45, 48, 1);
+    justify-content: center;
+}
+
+.ScoreContainer{
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    width: 258px;
+    height: 263px;
+    background-color: rgba(251, 251, 251, 1);
+    justify-content: center;
+}
+
+
+.Badges{
+    margin-top:28px;
+    margin-left:109px;
+    display: flex;
+    gap:30px;
+}

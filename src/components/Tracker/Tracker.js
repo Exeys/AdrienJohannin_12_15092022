@@ -31,11 +31,15 @@ const data = [
 
 export default function Tracker() {
   return (
-    <RadarChart outerRadius="75%" data={data}  width={250} height={250}>
-      <PolarGrid radialLines={false}/>
-      <PolarRadiusAxis  tick={false} axisLine={false} tickCount={6}/>
-      <PolarAngleAxis tick={{fill:"white",fontSize:"12px"}} dataKey="subject" />
-      <Radar name="Mike" dataKey="A" fill="rgba(255, 1, 1, 0.7)"  />
+    <RadarChart outerRadius="75%" data={data} width={250} height={250}>
+      <PolarGrid radialLines={false} />
+      <PolarRadiusAxis tick={false} axisLine={false} tickCount={6} />
+      <PolarAngleAxis tick={{
+        fill: "white",
+        fontSize: "12px",
+        fontWeight: "500"
+      }} dataKey="subject" />
+      <Radar name="Mike" dataKey="A" fill="rgba(255, 1, 1, 0.7)" />
     </RadarChart>
   )
 }
