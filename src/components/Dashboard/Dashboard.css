@@ -1,3 +1,7 @@
+.Dashboard{
+    margin-left:220px;
+}
+
 .DashboardContent {
     display: flex;
     margin-top: 77px;
@@ -9,7 +13,6 @@
 
 .Hello {
     text-align: left;
-    margin-left: 107px;
     margin-top:68px;
     gap:41px;
 }
@@ -59,7 +62,6 @@
 
 .Badges{
     margin-top:28px;
-    margin-left:109px;
     display: flex;
     gap:30px;
 }

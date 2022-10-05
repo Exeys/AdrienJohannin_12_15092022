@@ -1,0 +1,41 @@
+.ActivityContent {
+    background-color: #fbfbfb;
+    width: 835px;
+    height: 320px;
+}
+
+.ActivityLegend {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 32px;
+    margin-bottom: 0;
+    margin-right: 26px;
+}
+
+.ActivityTitle {
+    font-weight: 500;
+    line-height: 24px;
+    font-size: 15px;
+    font-family: Roboto;
+}
+
+.ActivityLegendList {
+}
+
+.ActivityLegendList li {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    font-family: Roboto;
+    color: #74798c;
+    display: inline;
+    margin-left: 32px;
+}
+
+.ActivityCharts {
+    display: flex;;
+    align-items: center;
+    justify-content: center;
+    padding:40px;
+
+}
