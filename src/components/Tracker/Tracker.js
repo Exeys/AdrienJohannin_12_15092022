@@ -5,15 +5,15 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis } from 'r
 const data = [
   {
     subject: 'Intensité',
-    A: 80,
+    A: 100,
   },
   {
     subject: 'Vitesse',
-    A: 220,
+    A: 210,
   },
   {
     subject: 'Force',
-    A: 110,
+    A: 170,
   },
   {
     subject: 'Endurance',
@@ -21,25 +21,26 @@ const data = [
   },
   {
     subject: 'Energie',
-    A: 240,
+    A: 190,
   },
   {
     subject: 'Cardio',
-    A: 80,
+    A: 160,
   },
 ]
 
 export default function Tracker() {
   return (
-    <RadarChart outerRadius="75%" data={data} width={250} height={250}>
-      <PolarGrid radialLines={false} />
-      <PolarRadiusAxis tick={false} axisLine={false} tickCount={6} />
-      <PolarAngleAxis tick={{
-        fill: "white",
-        fontSize: "12px",
-        fontWeight: "500"
-      }} dataKey="subject" />
-      <Radar name="Mike" dataKey="A" fill="rgba(255, 1, 1, 0.7)" />
-    </RadarChart>
+      <RadarChart outerRadius="75%" data={data} width={250} height={250}>
+        <PolarGrid radialLines={false} />
+        <PolarRadiusAxis tick={false} axisLine={false} tickCount={6} />
+        <PolarAngleAxis tick={{
+          fill: "white",
+          fontSize: "12px",
+          fontWeight: "500"
+        }} dataKey="subject" />
+        <Radar name="Mike" dataKey="A" fill="rgba(255, 1, 1, 0.7)" />
+      </RadarChart>
+
   )
 }
