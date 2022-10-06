@@ -15,12 +15,18 @@
 
 .CardInfos {
     margin: 32px 32px 32px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
 }
 
 .CardData {
     font-weight: 700;
     font-size: 20px;
     font-family: Roboto;
+    text-align: left;
+    margin-bottom:2px;
 }
 .CardTitle {
     font-weight: 500;

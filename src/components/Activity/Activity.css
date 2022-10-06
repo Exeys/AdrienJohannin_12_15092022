@@ -28,14 +28,27 @@
     line-height: 24px;
     font-family: Roboto;
     color: #74798c;
-    display: inline;
+    display: inline-block;
     margin-left: 32px;
 }
 
+.ActivityLegendList > li:before {
+    content: "";
+    display: list-item;
+    position: absolute;
+}
+
+#dot1::before {
+    color: #282d30;
+}
+
+#dot2::before {
+    color: #e60000;
+}
+
 .ActivityCharts {
-    display: flex;;
+    display: flex;
     align-items: center;
     justify-content: center;
-    padding:40px;
-
+    padding: 40px;
 }
