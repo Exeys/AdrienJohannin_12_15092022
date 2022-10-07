@@ -1,6 +1,6 @@
 import React from "react";
 import './Activity.css'
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip} from 'recharts';
 
 const data = [
     {
@@ -90,8 +90,8 @@ const CustomTooltip = ({ active, payload }) => {
         return (
             <div style={{ backgroundColor: "#E60000" }} className="custom-tooltip">
                 <div>
-                    {payload.map((pld) => (
-                        <div>
+                    {payload.map((pld,index) => (
+                        <div key={index}>
                             <div style={{ color: "white", padding: 12, fontSize: 7 }}>{pld.value}</div>
                         </div>
                     ))}

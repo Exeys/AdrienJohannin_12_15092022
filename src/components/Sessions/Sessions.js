@@ -1,6 +1,6 @@
 import React from 'react'
 import './Sessions.css'
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, Tooltip } from 'recharts';
 
 const data = [
     {
@@ -65,8 +65,8 @@ const CustomTooltip = ({ active, payload }) => {
         return (
             <div style={{ backgroundColor: "white" }} className="custom-tooltip">
                 <div>
-                    {payload.map((pld) => (
-                        <div>
+                    {payload.map((pld,index) => (
+                        <div key={index}>
                             <div style={{ color: "black", padding: 7, fontSize: 8 }}>{pld.value} min</div>
                         </div>
                     ))}
