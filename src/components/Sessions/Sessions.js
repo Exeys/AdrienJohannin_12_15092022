@@ -38,10 +38,21 @@ export default function Sessions() {
     const daysWeek = { 0: 'L', 1: 'M', 2: 'M', 3: 'J', 4: 'V', 5: 'S', 6: 'D' };
     const formatDate = (item) => daysWeek[item];
     return (
-        <figure style={{ margin: '0'}}>
+        <figure style={{ margin: '0', paddingBottom: '20px' }}>
+            <div style={{
+                fontSize: '15px',
+                color: '#FFFFFF',
+                fontWeight: '500',
+                fontFamily: 'Roboto',
+                textAlign: 'left',
+                marginLeft:'34px',
+                marginBottom:'40px',
+                maxWidth:'150px'
+            }}>Durée moyenne des sessions</div>
             <LineChart width={258} height={126} data={data}>
+
                 <Tooltip cursor={false} content={<CustomTooltip />} data={data.pv} />
-                <XAxis dy={12} style={{ fill: '#FFFFFF', fontSize: '12px' }} tickFormatter={formatDate} tickLine={false} dataKey={data.name} axisLine={false}></XAxis>
+                <XAxis dy={15} style={{ fill: '#FFFFFF', fontSize: '12px' }} tickFormatter={formatDate} tickLine={false} dataKey={data.name} axisLine={false}></XAxis>
                 <Line dot={false} type={"monotone"} dataKey="pv" stroke="#ffffff" strokeWidth={2} />
             </LineChart>
         </figure>

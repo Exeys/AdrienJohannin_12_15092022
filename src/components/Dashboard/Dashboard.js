@@ -11,7 +11,11 @@ import imgProt from '../../assets/prot.svg'
 import imgCarb from '../../assets/carbs.svg'
 import imgFat from '../../assets/fats.svg'
 
+import getUserData from '../../service/api'
+
+
 const Dashboard = () => {
+
     return (
         <div className="Dashboard">
             <div className="Hello">

@@ -1,0 +1,26 @@
+.PageNotFoundContent {
+    margin: auto;
+    color: #ff6060;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat;
+}
+
+.PageNotFoundContent p {
+
+    font-size: 26px;
+    text-align: center;
+}
+
+.Redirection{
+    margin-top:50px;
+}
+
+.Redirection a{
+    font-size:16px;
+}
+.Redirection a:visited {
+    color: inherit;
+}
