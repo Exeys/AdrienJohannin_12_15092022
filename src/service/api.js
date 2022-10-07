@@ -15,8 +15,9 @@ class Api {
         return response.data.data
     }
 
-    getUserAvgSessions(id) {
-        return axios.get(this.baseURL + id + '/average-sessions')
+    async getUserAvgSessions(id) {
+        const response = await axios.get(this.baseURL + id + '/average-sessions')
+        return response.data.data
     }
 
     getUserPerformance(id) {

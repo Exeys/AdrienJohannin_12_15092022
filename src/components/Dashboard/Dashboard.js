@@ -36,7 +36,6 @@ const Dashboard = () => {
     }, []
     )
 
-console.log(userActivity)
 
     return (
         <div className="Dashboard">
@@ -52,7 +51,7 @@ console.log(userActivity)
                                 <Activity userActivity={userActivity} />
                                 <div className="Badges">
                                     <div className="SessionsContainer">
-                                        <Sessions />
+                                        <Sessions userAvgSessions={userAvgSessions}/>
                                     </div>
                                     <div className="TrackerContainer">
                                         <Tracker />
