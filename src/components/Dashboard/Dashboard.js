@@ -20,21 +20,23 @@ const Dashboard = () => {
 
 
     const { id } = useParams();
+
     const [user, setUser] = useState(null)
+    const [userActivity, setUserActivity] = useState(null)
+    const [userAvgSessions, setUserAvgSessions] = useState(null)
+    const [userPerfomance, setUserPerformance] = useState(null)
 
 
     const api = new Api()
-    useEffect(
-        () => {
-            api.getUserData(id).then(res => {
-                setUser(res)
-            })
-        }, []
+    useEffect(() => {
+        api.getUserData(id).then(res => { setUser(res) });
+        api.getUserActivity(id).then(res => { setUserActivity(res) });
+        api.getUserAvgSessions(id).then(res => { setUserAvgSessions(res) });
+        api.getUserPerformance(id).then(res => { setUserPerformance(res) })
+    }, []
     )
 
-
-
-
+console.log(userActivity)
 
     return (
         <div className="Dashboard">
@@ -47,7 +49,7 @@ const Dashboard = () => {
                         </div>
                         <div className="DashboardContent">
                             <div className="left">
-                                <Activity />
+                                <Activity userActivity={userActivity} />
                                 <div className="Badges">
                                     <div className="SessionsContainer">
                                         <Sessions />
@@ -62,10 +64,10 @@ const Dashboard = () => {
                             </div>
                             <div className="right">
                                 <div className="Cards">
-                                    <Card icon={imgKcal} content="1,930kCal" type="Calories" />
-                                    <Card icon={imgProt} content="155g" type="Proteines" />
-                                    <Card icon={imgCarb} content="290g" type="Glucides" />
-                                    <Card icon={imgFat} content="50g" type="Lipides" />
+                                    <Card icon={imgKcal} content={user.keyData.calorieCount} type="Calories" unit="kCal" />
+                                    <Card icon={imgProt} content={user.keyData.proteinCount} type="Proteines" unit="g" />
+                                    <Card icon={imgCarb} content={user.keyData.carbohydrateCount} type="Glucides" unit="g" />
+                                    <Card icon={imgFat} content={user.keyData.lipidCount} type="Lipides" unit="g" />
                                 </div>
                             </div>
                         </div>

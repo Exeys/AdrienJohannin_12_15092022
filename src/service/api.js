@@ -10,8 +10,9 @@ class Api {
         return response.data.data
     }
 
-    getUserActivity(id) {
-        return axios.get(this.baseURL + id + '/activity')
+    async getUserActivity(id) {
+        const response = await axios.get(this.baseURL + id + '/activity')
+        return response.data.data
     }
 
     getUserAvgSessions(id) {
