@@ -20,8 +20,9 @@ class Api {
         return response.data.data
     }
 
-    getUserPerformance(id) {
-        return axios.get(this.baseURL + id + '/performance')
+    async getUserPerformance(id) {
+        const response = await axios.get(this.baseURL + id + '/performance')
+        return response.data.data
     }
 
 }
