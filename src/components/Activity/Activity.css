@@ -1,7 +1,7 @@
 .ActivityContent {
     background-color: #fbfbfb;
-    width: 835px;
-    height: 320px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+
 }
 
 .ActivityLegend {
@@ -17,9 +17,6 @@
     line-height: 24px;
     font-size: 15px;
     font-family: Roboto;
-}
-
-.ActivityLegendList {
 }
 
 .ActivityLegendList li {

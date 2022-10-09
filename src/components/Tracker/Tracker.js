@@ -1,5 +1,4 @@
 import React from "react";
-import './Tracker.css'
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis } from 'recharts';
 
 

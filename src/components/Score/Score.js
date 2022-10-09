@@ -1,6 +1,5 @@
 import React from "react";
 import { PolarAngleAxis, RadialBar, RadialBarChart, Legend } from "recharts";
-import './Score.css'
 
 
 

@@ -1,10 +1,11 @@
 import React from "react";
 import './Activity.css'
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 export default function Activity({ userActivity }) {
 
     return (
+
         <div className="ActivityContent">
             <div className="ActivityLegend">
                 <div className="ActivityTitle">
@@ -16,26 +17,27 @@ export default function Activity({ userActivity }) {
                 </ul>
             </div>
             {/* Component chart for activity */}
-            <div className="ActivityCharts">
-                <BarChart
-                    barGap={8}
-                    barSize={56}
-                    width={700}
-                    height={200}
-                    data={userActivity.sessions}
-
-                >
-                    {/**          <Legend align="right" iconSize="8" iconType="circle" payload={[{ value: "Poids (kg)" }, { value: "Calories brûlées (kCal)", color: "red" }]} verticalAlign="top" wrapperStyle={{paddingBottom: "15px"}}/> */}
-                    <CartesianGrid strokeDasharray="3 3" vertical={false} />
-                    <XAxis dataKey="day" dy={16} tickLine={false} tickFormatter={day => day.split("-")[2][1]} />
-                    <YAxis yAxisId="right" dataKey="kilogram" dx={25} orientation="right" domain={['dataMin - 1', 'dataMax + 1']} tickLine={false} interval={1} />
-                    <YAxis hide={true} yAxisId="left" dataKey="calories" dx={25} orientation="left" domain={['dataMin - 100', 'dataMax + 100']} tickLine={false} />
-                    <Tooltip content={<CustomTooltip />} cursor={{ fill: "#C4C4C480" }} />
-                    <Bar yAxisId="right" radius={[20, 20, 0, 0]} dataKey="kilogram" fill="#282D30" barSize={7} />
-                    <Bar yAxisId="left" radius={[20, 20, 0, 0]} dataKey="calories" fill="#E60000" barSize={7} />
-                </BarChart>
+            <div className="ActivityCharts" style={{ height: '200px' }}>
+                <ResponsiveContainer>
+                    <BarChart
+                        barGap={8}
+                        barSize={56}
+                        width={700}
+                        height={200}
+                        data={userActivity.sessions}>
+                        <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                        <XAxis dataKey="day" dy={16} tickLine={false} tickFormatter={day => day.split("-")[2][1]} />
+                        <YAxis yAxisId="right" dataKey="kilogram" dx={25} orientation="right" domain={['dataMin - 1', 'dataMax + 1']} tickLine={false} interval={1} />
+                        <YAxis hide={true} yAxisId="left" dataKey="calories" dx={25} orientation="left" domain={['dataMin - 100', 'dataMax + 100']} tickLine={false} />
+                        <Tooltip content={<CustomTooltip />} cursor={{ fill: "#C4C4C480" }} />
+                        <Bar yAxisId="right" radius={[20, 20, 0, 0]} dataKey="kilogram" fill="#282D30" barSize={7} />
+                        <Bar yAxisId="left" radius={[20, 20, 0, 0]} dataKey="calories" fill="#E60000" barSize={7} />
+                    </BarChart>
+                </ResponsiveContainer>
             </div>
         </div>
+
+
     )
 }
 

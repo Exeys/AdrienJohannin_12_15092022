@@ -17,14 +17,12 @@ import Api from '../../service/api.js';
 
 const Dashboard = () => {
 
-
     const { id } = useParams();
 
     const [user, setUser] = useState(null)
     const [userActivity, setUserActivity] = useState(null)
     const [userAvgSessions, setUserAvgSessions] = useState(null)
     const [userPerformance, setUserPerformance] = useState(null)
-
 
     const api = new Api()
     useEffect(() => {
@@ -49,13 +47,13 @@ const Dashboard = () => {
                                 <Activity userActivity={userActivity} />
                                 <div className="Badges">
                                     <div className="SessionsContainer">
-                                        <Sessions userAvgSessions={userAvgSessions}/>
+                                        <Sessions userAvgSessions={userAvgSessions} />
                                     </div>
                                     <div className="TrackerContainer">
-                                        <Tracker userPerformance={userPerformance}/>
+                                        <Tracker userPerformance={userPerformance} />
                                     </div>
                                     <div className="ScoreContainer">
-                                        <Score score={user.todayScore || user.score}/>
+                                        <Score score={user.todayScore || user.score} />
                                     </div>
                                 </div>
                             </div>
@@ -71,11 +69,7 @@ const Dashboard = () => {
                     </>
                 )
             }
-
         </div>
-
-
-
     )
 }
 
