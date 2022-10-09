@@ -15,7 +15,6 @@ import { useParams } from 'react-router-dom'
 
 import Api from '../../service/api.js';
 
-
 const Dashboard = () => {
 
 
@@ -24,7 +23,7 @@ const Dashboard = () => {
     const [user, setUser] = useState(null)
     const [userActivity, setUserActivity] = useState(null)
     const [userAvgSessions, setUserAvgSessions] = useState(null)
-    const [userPerfomance, setUserPerformance] = useState(null)
+    const [userPerformance, setUserPerformance] = useState(null)
 
 
     const api = new Api()
@@ -35,7 +34,6 @@ const Dashboard = () => {
         api.getUserPerformance(id).then(res => { setUserPerformance(res) })
     }, []
     )
-
 
     return (
         <div className="Dashboard">
@@ -54,10 +52,10 @@ const Dashboard = () => {
                                         <Sessions userAvgSessions={userAvgSessions}/>
                                     </div>
                                     <div className="TrackerContainer">
-                                        <Tracker />
+                                        <Tracker userPerformance={userPerformance}/>
                                     </div>
                                     <div className="ScoreContainer">
-                                        <Score />
+                                        <Score score={user.todayScore || user.score}/>
                                     </div>
                                 </div>
                             </div>

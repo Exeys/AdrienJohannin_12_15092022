@@ -3,13 +3,14 @@ import { PolarAngleAxis, RadialBar, RadialBarChart, Legend } from "recharts";
 import './Score.css'
 
 
-const data = [
-    {
-        "value": 0.12
-    }
-];
 
-export default function Score() {
+export default function Score({ score }) {
+
+    const data = [
+        {
+            "value": score
+        }
+    ];
     return (<figure>
         <div style={{
             fontSize: '15px',
@@ -29,6 +30,7 @@ export default function Score() {
     )
 }
 const CustomLegend = ({ payload }) => (
+
     <div style={{
         display: 'flex',
         flexDirection: 'column',
