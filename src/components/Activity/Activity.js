@@ -17,7 +17,6 @@ export default function Activity({ userActivity }) {
                     <li id="dot2">Calories brûlées (kCal)</li>
                 </ul>
             </div>
-            {/* Component chart for activity */}
             <div className="ActivityCharts" style={{ height: '200px' }}>
                 <ResponsiveContainer>
                     <BarChart

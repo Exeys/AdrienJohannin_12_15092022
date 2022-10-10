@@ -4,6 +4,7 @@
 
 .DashboardContent {
     display: flex;
+    flex-wrap:wrap;
     margin-top: 77px;
 }
 
@@ -68,15 +69,6 @@
     margin-top: 28px;
     display: flex;
     gap: 30px;
-    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 80px;;
-}
-
-.left {
-    width: 70%;
-}
-
-.right {
-    width: 30%;
 }
