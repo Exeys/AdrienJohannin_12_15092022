@@ -3,6 +3,10 @@ import './Header.css'
 import logo from '../../assets/logo.png'
 import logoText from '../../assets/logoText.png'
 
+
+/**
+ * A component which render a Header for Profile page
+ */
 const Header = () => {
     return (
         <nav className="HeaderContainer">

@@ -3,10 +3,18 @@ import { LineChart, Line, XAxis, Tooltip, Rectangle } from 'recharts';
 import Proptypes from 'prop-types'
 
 
-
+/**
+ * A function that render a Sessions component which contain a Line Chart
+ * of user last sessions from parameter object
+ * @param {Object} userAvgSessions
+ */
 export default function Sessions({ userAvgSessions }) {
-    const daysWeek = { 1: 'L', 2: 'M', 3: 'M', 4: 'J', 5: 'V', 6: 'S', 7: 'D' };
-    const formatDate = (item) => daysWeek[item];
+
+    /**
+     * Day as number from data are changing for letters
+     */
+    const days = { 1: 'L', 2: 'M', 3: 'M', 4: 'J', 5: 'V', 6: 'S', 7: 'D' };
+    const formatDate = (item) => days[item];
     return (
         <div style={{ margin: '0', paddingBottom: '20px' }}>
             <div style={{
@@ -22,12 +30,16 @@ export default function Sessions({ userAvgSessions }) {
 
             <LineChart width={258} height={126} data={userAvgSessions.sessions}>
                 <Tooltip cursor={<CustomCursor />} content={<CustomTooltip />} />
-                <XAxis dy={16} style={{ fill: '#FFFFFF', fontSize: '12px' }} tickFormatter={formatDate} tickLine={false} dataKey="day" axisLine={false}></XAxis>
+                <XAxis dy={9} style={{ fill: '#FFFFFF' }} tickFormatter={formatDate} tickLine={false} dataKey="day" axisLine={false} />
                 <Line dot={false} type={"monotone"} dataKey="sessionLength" stroke="#ffffff" strokeWidth={2} />
             </LineChart>
         </div>
     )
 }
+
+/**
+ * Custom component rendering a personalized tooltip
+ */
 const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
         return (
@@ -55,5 +67,5 @@ const CustomCursor = () => {
 
 
 Sessions.propTypes = {
-    userAvgSessions: Proptypes.array
+    userAvgSessions: Proptypes.object
 }

@@ -2,7 +2,12 @@ import React from "react";
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis } from 'recharts';
 import Proptypes from 'prop-types'
 
-
+/**
+ * A function that render Tracker component which contain a Radar Chart
+ * of user performance from parameter object
+ * @param {Object} userPerformance
+ * @returns 
+ */
 export default function Tracker({ userPerformance }) {
 
   const kind = { 1: 'Cardio', 2: 'Energie', 3: 'Endurance', 4: 'Force', 5: 'Vitesse', 6: 'Intensité' };
@@ -23,6 +28,6 @@ export default function Tracker({ userPerformance }) {
   )
 } 
 
-Tracker.Proptypes = {
-  userPerformance: Proptypes.array
+Tracker.propTypes = {
+  userPerformance: Proptypes.object
 }

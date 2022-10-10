@@ -5,7 +5,9 @@ import swim from '../../assets/swim.svg'
 import bike from '../../assets/bike.svg'
 import dumbbell from '../../assets/dumbbell.svg'
 
-
+/**
+ * A component which render a Sidebar for Profile page
+ */
 const Sidebar = () => {
     return (
         <nav className="SidebarContainer">

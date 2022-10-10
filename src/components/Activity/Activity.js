@@ -3,10 +3,14 @@ import './Activity.css'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import Proptypes from 'prop-types'
 
+/**
+ * A function that render Activity component which contain a Bar Chart 
+ * of user last activity from parameter object
+ * @param {Object} userActivity
+ */
 export default function Activity({ userActivity }) {
 
     return (
-
         <div className="ActivityContent">
             <div className="ActivityLegend">
                 <div className="ActivityTitle">
@@ -41,6 +45,9 @@ export default function Activity({ userActivity }) {
     )
 }
 
+/**
+ * Custom component rendering a personalized tooltip
+ */
 const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
         return (
@@ -60,5 +67,5 @@ const CustomTooltip = ({ active, payload }) => {
 };
 
 Activity.propTypes = {
-    userActivity: Proptypes.array
+    userActivity: Proptypes.object
 }

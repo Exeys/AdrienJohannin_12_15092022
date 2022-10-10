@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
+/**
+ * A component which render an Homepage where you can choose 
+ * from different users to get profile page
+ */
 const Home = () => {
     return (
         <div style={{

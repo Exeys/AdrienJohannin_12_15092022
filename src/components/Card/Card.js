@@ -2,6 +2,10 @@ import React from "react";
 import './Card.css'
 import Proptypes from 'prop-types'
 
+/**
+ * A component which render a Card for specified type, unit and content
+ * @param {*} props 
+ */
 const Card = (props) => {
 
     return (

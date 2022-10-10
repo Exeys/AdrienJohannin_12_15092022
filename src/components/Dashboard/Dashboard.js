@@ -15,15 +15,29 @@ import { useParams } from 'react-router-dom'
 
 import Api from '../../service/api.js';
 
+
+/**
+ * A component which render a Dashboard for Profile page
+ */
 const Dashboard = () => {
 
+    /**
+     * Id retrieval from url
+     */
     const { id } = useParams();
 
+    /**
+     * Init state variables
+     */
     const [user, setUser] = useState(null)
     const [userActivity, setUserActivity] = useState(null)
     const [userAvgSessions, setUserAvgSessions] = useState(null)
     const [userPerformance, setUserPerformance] = useState(null)
 
+    /**
+     * Instantiation of Api class to call functions, 
+     * each result is store in previous initied variables
+     */
     const api = new Api()
     useEffect(() => {
         api.getUserData(id).then(res => { setUser(res) });

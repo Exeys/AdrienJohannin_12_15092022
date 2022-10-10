@@ -3,9 +3,16 @@ import { PolarAngleAxis, RadialBar, RadialBarChart, Legend } from "recharts";
 import Proptypes from 'prop-types'
 
 
-
+/**
+ * A function that render Score component which contain a Radial Bar Chart
+ * of user daily score 
+ * @param {Object} score
+ */
 export default function Score({ score }) {
 
+    /**
+     * Data as object from props are convert to an array to ease usage in component
+     */
     const data = [
         {
             "value": score
@@ -29,6 +36,10 @@ export default function Score({ score }) {
 
     )
 }
+
+/**
+ * Custom component render a personalized legend
+ */
 const CustomLegend = ({ payload }) => (
 
     <div style={{
@@ -49,5 +60,5 @@ const CustomLegend = ({ payload }) => (
 );
 
 Score.propTypes = {
-    score: Proptypes.array
+    score: Proptypes.object
 }
