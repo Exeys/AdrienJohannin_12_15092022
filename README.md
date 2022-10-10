@@ -18,7 +18,7 @@ If you are working with several versions of NodeJS, we recommend you install [nv
 
 ## 1. Backend
 
-###1.1 Installation
+### 1.1 Installation
 
 - Fork the [repository](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard/)
 - Clone it on your computer.
@@ -27,7 +27,7 @@ If you are working with several versions of NodeJS, we recommend you install [nv
 
 ## 2. Frontend
 
-###2.1 Installation
+### 2.1 Installation
 
 - Clone the [repository](https://github.com/Exeys/AdrienJohannin_12_15092002)
 - Go to the project directory
