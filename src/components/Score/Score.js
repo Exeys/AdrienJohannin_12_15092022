@@ -1,5 +1,6 @@
 import React from "react";
 import { PolarAngleAxis, RadialBar, RadialBarChart, Legend } from "recharts";
+import Proptypes from 'prop-types'
 
 
 
@@ -46,3 +47,7 @@ const CustomLegend = ({ payload }) => (
         <div>objectif</div>
     </div>
 );
+
+Score.propTypes = {
+    score: Proptypes.array
+}

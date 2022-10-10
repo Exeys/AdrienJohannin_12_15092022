@@ -1,5 +1,7 @@
 import React from 'react'
 import { LineChart, Line, XAxis, Tooltip, Rectangle } from 'recharts';
+import Proptypes from 'prop-types'
+
 
 
 export default function Sessions({ userAvgSessions }) {
@@ -50,3 +52,8 @@ const CustomCursor = () => {
         <Rectangle />
     );
 };
+
+
+Sessions.propTypes = {
+    userAvgSessions: Proptypes.array
+}

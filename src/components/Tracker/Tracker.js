@@ -1,5 +1,6 @@
 import React from "react";
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis } from 'recharts';
+import Proptypes from 'prop-types'
 
 
 export default function Tracker({ userPerformance }) {
@@ -21,3 +22,7 @@ export default function Tracker({ userPerformance }) {
 
   )
 } 
+
+Tracker.Proptypes = {
+  userPerformance: Proptypes.array
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import './Card.css'
+import Proptypes from 'prop-types'
 
 const Card = (props) => {
 
@@ -18,3 +19,10 @@ const Card = (props) => {
 }
 
 export default Card
+
+Card.propTypes = {
+    icon: Proptypes.string,
+    content: Proptypes.number,
+    unit: Proptypes.string,
+    type: Proptypes.string
+}

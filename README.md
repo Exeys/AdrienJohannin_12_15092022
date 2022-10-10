@@ -13,7 +13,7 @@ If you are working with several versions of NodeJS, we recommend you install [nv
 - react v18.2.0
 - react-router-dom v6.4.2
 - recharts v2.1.14
-- proptypes v1.1.0
+- prop-types v15.8.1
 
 
 ## 1. Backend
@@ -22,8 +22,8 @@ If you are working with several versions of NodeJS, we recommend you install [nv
 
 - Fork the [repository](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard/)
 - Clone it on your computer.
-- The yarn command will allow you to install the dependencies.
-- The yarn dev command will allow you to run the micro API.
+- The ```yarn``` command will allow you to install the dependencies.
+- The ```yarn dev``` command will allow you to run the micro API.
 
 ## 2. Frontend
 
