@@ -1,4 +1,7 @@
-# SportSee 
+🙍‍♂️ Adrien Johannin - Project 12 (Build an analytics dashboard with React)
+
+
+![SportSee](https://repository-images.githubusercontent.com/490431895/3be0345e-68b8-46e2-8323-0311c628961b)
 
 ### Prerequisites
 
@@ -42,4 +45,3 @@ If you are working with several versions of NodeJS, we recommend you install [nv
 
 The server is now available at http://localhost:3001 (note that API take port 3000)
 
-![SportSee](https://repository-images.githubusercontent.com/490431895/3be0345e-68b8-46e2-8323-0311c628961b)
