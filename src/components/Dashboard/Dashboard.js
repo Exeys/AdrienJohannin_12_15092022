@@ -15,7 +15,6 @@ import { useParams } from 'react-router-dom'
 
 import Api from '../../service/api.js';
 
-
 /**
  * A component which render a Dashboard for Profile page
  */
@@ -34,6 +33,7 @@ const Dashboard = () => {
     const [userAvgSessions, setUserAvgSessions] = useState(null)
     const [userPerformance, setUserPerformance] = useState(null)
 
+    
     /**
      * Instantiation of Api class to call functions, 
      * each result is store in previous initied variables
@@ -43,14 +43,14 @@ const Dashboard = () => {
         api.getUserData(id).then(res => { setUser(res) });
         api.getUserActivity(id).then(res => { setUserActivity(res) });
         api.getUserAvgSessions(id).then(res => { setUserAvgSessions(res) });
-        api.getUserPerformance(id).then(res => { setUserPerformance(res) })
+        api.getUserPerformance(id).then(res => { setUserPerformance(res) });
     }, []
     )
 
     return (
         <div className="Dashboard">
             {
-                user && (
+                user && userActivity && userAvgSessions && userPerformance ?(
                     <>
                         <div className="Hello">
                             <p className="HelloName">Bonjour <span style={{ color: "#FF0101" }}>{user.userInfos.firstName}</span></p>
@@ -81,6 +81,8 @@ const Dashboard = () => {
                             </div>
                         </div>
                     </>
+                ) : (
+                    <p>Aucunes données reçues</p>
                 )
             }
         </div>
