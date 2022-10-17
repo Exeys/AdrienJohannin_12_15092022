@@ -66,8 +66,7 @@ const CustomLegend = ({ payload }) => (
             marginBottom: '0',
             zIndex: 1
         }}>{payload[0].payload.value * 100}%</h2>
-        <div style={{ zIndex: 1 }}>de votre</div>
-        <div style={{ zIndex: 1 }}>objectif</div>
+        <div style={{ zIndex: 1, maxWidth: '100px', color: '#74798C'}}>de votre objectif</div>
     </div>
 );
 
