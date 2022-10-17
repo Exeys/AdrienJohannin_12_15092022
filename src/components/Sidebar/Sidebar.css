@@ -1,9 +1,9 @@
 .SidebarContainer {
-    padding-top: 91px;
+    padding-top: 64px;
     top: 0;
     left: 0;
     background-color: black;
-    width: 117px;
+    width: 82px;
     height: 100%;
     display: flex;
     position: fixed;
@@ -17,15 +17,15 @@
 
 .SidebarItem {
     color: white;
-    margin: 10px;
+    margin: 7px;
 }
 
 #copyright {
-    margin-top: 160px;
-    padding: 40px;
+    margin-top: 112px;
+    padding: 28px;
     transform: rotate(-90deg);
-    font-size: 12px;
+    font-size: 9px;
     font-weight: 500;
     font-family: Roboto;
-    width: 150px;
+    width: 105px;
 }

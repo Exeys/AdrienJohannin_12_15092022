@@ -3,17 +3,16 @@
     align-items: center;
     background-color: black;
     justify-content: space-between;
-    padding: 20px 80px 20px 30px;
+    padding: 14px 56px 14px 21px;
 }
 
 .HeaderItem {
     color: white;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 17px;
     font-family: Roboto;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 7px;
     font-weight: 500;
-    line-height: 24px;
 }

@@ -18,17 +18,17 @@ export default function Sessions({ userAvgSessions }) {
     return (
         <div style={{ margin: '0', paddingBottom: '20px' }}>
             <div style={{
-                fontSize: '15px',
+                fontSize: '11px',
                 color: '#FFFFFF',
                 fontWeight: '500',
                 fontFamily: 'Roboto',
                 textAlign: 'left',
-                marginLeft: '34px',
-                marginBottom: '40px',
-                maxWidth: '150px'
+                marginLeft: '24px',
+                marginBottom: '28px',
+                maxWidth: '105px'
             }}>Durée moyenne des sessions</div>
 
-            <LineChart width={258} height={126} data={userAvgSessions.sessions}>
+            <LineChart width={181} height={88} data={userAvgSessions.sessions}>
                 <Tooltip cursor={<CustomCursor />} content={<CustomTooltip />} wrapperStyle={{ outline: 'none' }} />
                 <XAxis dy={9} style={{ fill: '#FFFFFF' }} tickFormatter={formatDate} tickLine={false} dataKey="day" axisLine={false} />
                 <Line dot={false} type={"monotone"} dataKey="sessionLength" stroke="#ffffff" strokeWidth={2} />
@@ -47,7 +47,7 @@ const CustomTooltip = ({ active, payload }) => {
                 <div>
                     {payload.map((pld, index) => (
                         <div key={index}>
-                            <div style={{ color: "black", padding: 7, fontSize: 8 }}>{pld.value} min</div>
+                            <div style={{ color: "black", padding: 5, fontSize: 6 }}>{pld.value} min</div>
                         </div>
                     ))}
                 </div>

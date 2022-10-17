@@ -14,12 +14,12 @@ export default function Tracker({ userPerformance }) {
   const formatKind = (item) => kind[item];
 
   return (
-    <RadarChart data={userPerformance.data} outerRadius="60%" width={250} height={250}>
+    <RadarChart data={userPerformance.data} outerRadius="60%" width={175} height={175}>
       <PolarGrid radialLines={false} />
       <PolarRadiusAxis tick={false} axisLine={false} tickCount={6} />
       <PolarAngleAxis tick={{
         fill: "white",
-        fontSize: "12px",
+        fontSize: "9px",
         fontWeight: "500"
       }} dataKey="kind" tickFormatter={formatKind} />
       <Radar name="activity" dataKey="value" fill="rgba(255, 1, 1, 0.7)" />

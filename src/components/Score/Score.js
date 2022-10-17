@@ -20,15 +20,15 @@ export default function Score({ score }) {
     ];
     return (<figure>
         <div style={{
-            fontSize: '15px',
+            fontSize: '11px',
             fontColor: '#20253A',
             fontWeight: '500',
             fontFamily: 'Roboto',
             textAlign: 'left'
         }}>Score</div>
-        <RadialBarChart width={200} height={200} innerRadius={80} outerRadius={80} barSize={12} data={data} startAngle={-270} endAngle={90}>
+        <RadialBarChart width={140} height={140} innerRadius={56} outerRadius={56} barSize={9} data={data} startAngle={-270} endAngle={90}>
             <PolarAngleAxis type="number" domain={[0, 1]} angleAxisId={0} tick={false} />
-            <RadialBar dataKey="value" cornerRadius={50} background={false} fill="#E60000" />
+            <RadialBar dataKey="value" cornerRadius={35} background={false} fill="#E60000" />
             <Legend data={data} value="score" verticalAlign="middle" align="center" content={CustomLegend} />
         </RadialBarChart>
     </figure>
@@ -46,11 +46,11 @@ const CustomLegend = ({ payload }) => (
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        marginBottom: '20px',
+        marginBottom: '14px',
     }}>
         <div id="circle" style={{
-            height: '145px',
-            width: '145px',
+            height: '102px',
+            width: '102px',
             backgroundColor: 'white',
             borderRadius: '50%',
             position: 'absolute',
@@ -61,12 +61,12 @@ const CustomLegend = ({ payload }) => (
         }}></div>
         <h2 style={{
             color: '#282D30',
-            fontSize: '26px',
+            fontSize: '18px',
             fontFamily: 'Roboto',
             marginBottom: '0',
             zIndex: 1
         }}>{payload[0].payload.value * 100}%</h2>
-        <div style={{ zIndex: 1, maxWidth: '100px', color: '#74798C'}}>de votre objectif</div>
+        <div style={{ zIndex: 1, maxWidth: '70px', color: '#74798C'}}>de votre objectif</div>
     </div>
 );
 

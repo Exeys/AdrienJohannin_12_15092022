@@ -12,7 +12,7 @@ const Header = () => {
         <nav className="HeaderContainer">
             <a className="HeaderItem" href=".">
                 <img src={logo} alt="logo" />
-                <img src={logoText} alt="logo" height={24.29} width={109.3}/>
+                <img src={logoText} alt="logo" height={17} width={76}/>
             </a>
             <a className="HeaderItem" href="/">Accueil</a>
             <a className="HeaderItem" href=".">Profil</a>
