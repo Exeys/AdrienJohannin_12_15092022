@@ -48,14 +48,26 @@ const CustomLegend = ({ payload }) => (
         alignItems: 'center',
         marginBottom: '20px',
     }}>
+        <div id="circle" style={{
+            height: '145px',
+            width: '145px',
+            backgroundColor: 'white',
+            borderRadius: '50%',
+            position: 'absolute',
+            transform: 'translate(-50%, -50%)',
+            left: '50%',
+            top: '50%',
+            zIndex: 0
+        }}></div>
         <h2 style={{
             color: '#282D30',
             fontSize: '26px',
             fontFamily: 'Roboto',
-            marginBottom: '0'
+            marginBottom: '0',
+            zIndex: 1
         }}>{payload[0].payload.value * 100}%</h2>
-        <div>de votre</div>
-        <div>objectif</div>
+        <div style={{ zIndex: 1 }}>de votre</div>
+        <div style={{ zIndex: 1 }}>objectif</div>
     </div>
 );
 
