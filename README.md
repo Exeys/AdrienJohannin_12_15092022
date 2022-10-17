@@ -45,3 +45,16 @@ If you are working with several versions of NodeJS, we recommend you install [nv
 
 The server is now available at http://localhost:3001 (note that API take port 3000)
 
+
+### 2.2 Usage
+
+By default the application uses API data but you may have to use the mocked datas (if you didn't achieve to start API server for example)
+
+Then go to ```api.js``` file in the ```service``` folder
+and replace ```this.mocked = false``` to ```this.mocked = true``` in the class constructor
+
+You may now use the mocked datas!
+
+
+
+
