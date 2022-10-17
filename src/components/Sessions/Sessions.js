@@ -29,7 +29,7 @@ export default function Sessions({ userAvgSessions }) {
             }}>Durée moyenne des sessions</div>
 
             <LineChart width={258} height={126} data={userAvgSessions.sessions}>
-                <Tooltip cursor={<CustomCursor />} content={<CustomTooltip />} />
+                <Tooltip cursor={<CustomCursor />} content={<CustomTooltip />} wrapperStyle={{ outline: 'none' }} />
                 <XAxis dy={9} style={{ fill: '#FFFFFF' }} tickFormatter={formatDate} tickLine={false} dataKey="day" axisLine={false} />
                 <Line dot={false} type={"monotone"} dataKey="sessionLength" stroke="#ffffff" strokeWidth={2} />
             </LineChart>

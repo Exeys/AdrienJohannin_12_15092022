@@ -33,7 +33,7 @@ export default function Activity({ userActivity }) {
                         <XAxis dataKey="day" dy={16} tickLine={false} tickFormatter={day => day.split("-")[2][1]} />
                         <YAxis yAxisId="right" dataKey="kilogram" dx={25} orientation="right" domain={['dataMin - 1', 'dataMax + 1']} tickLine={false} interval={1} />
                         <YAxis hide={true} yAxisId="left" dataKey="calories" dx={25} orientation="left" domain={['dataMin - 100', 'dataMax + 100']} tickLine={false} />
-                        <Tooltip content={<CustomTooltip />} cursor={{ fill: "#C4C4C480" }} />
+                        <Tooltip content={<CustomTooltip />} cursor={{ fill: "#C4C4C480" } } wrapperStyle={{outline:'none'}} />
                         <Bar yAxisId="right" radius={[20, 20, 0, 0]} dataKey="kilogram" fill="#282D30" barSize={7} />
                         <Bar yAxisId="left" radius={[20, 20, 0, 0]} dataKey="calories" fill="#E60000" barSize={7} />
                     </BarChart>
@@ -49,15 +49,14 @@ export default function Activity({ userActivity }) {
  * Custom component rendering a personalized tooltip
  */
 const CustomTooltip = ({ active, payload }) => {
-    if (active && payload && payload.length) {
+    if (active && payload) {
         return (
-            <div style={{ backgroundColor: "#E60000" }} className="custom-tooltip">
+            <div style={{ backgroundColor: "#E60000" }}>
                 <div>
-                    {payload.map((pld, index) => (
-                        <div key={index}>
-                            <div style={{ color: "white", padding: 12, fontSize: 7 }}>{pld.value}</div>
-                        </div>
-                    ))}
+                    <div >
+                        <div style={{ color: "white", padding: 12, fontSize: 7 }}>{payload[0].value}kg</div>
+                        <div style={{ color: "white", padding: 12, fontSize: 7 }}>{payload[1].value}kcal</div>
+                    </div>
                 </div>
             </div>
         );
