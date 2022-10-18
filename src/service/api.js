@@ -1,5 +1,6 @@
 import axios from "axios";
 import { USER_MAIN_DATA, USER_ACTIVITY, USER_AVERAGE_SESSIONS, USER_PERFORMANCE } from './mockedData'
+import FormatApi from "./formatApi";
 
 /**
  * Class grouping query functions for SportSee API
@@ -12,8 +13,10 @@ class Api {
     constructor() {
         this.baseURL = 'http://localhost:3000/user/'
         this.mocked = false
-    }
+        this.FormatApi = new FormatApi()
 
+    }
+    
     /**
      * Fetch the main data for id
      * @param {string} id known as user id
@@ -48,7 +51,7 @@ class Api {
     async getUserAvgSessions(id) {
         if (!this.mocked) {
             const response = await axios.get(this.baseURL + id + '/average-sessions')
-            return response.data.data
+            return this.FormatApi.formatAvgSessions(response.data.data)
         }
         return USER_AVERAGE_SESSIONS
     }
