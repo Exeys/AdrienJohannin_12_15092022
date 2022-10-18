@@ -71,5 +71,5 @@ const CustomLegend = ({ payload }) => (
 );
 
 Score.propTypes = {
-    score: Proptypes.object
+    score: Proptypes.number
 }

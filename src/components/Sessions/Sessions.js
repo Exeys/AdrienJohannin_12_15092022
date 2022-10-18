@@ -1,5 +1,5 @@
 import React from 'react'
-import { LineChart, Line, XAxis, Tooltip, Rectangle } from 'recharts';
+import { LineChart, Line, XAxis, Tooltip } from 'recharts';
 import Proptypes from 'prop-types'
 
 
@@ -10,11 +10,6 @@ import Proptypes from 'prop-types'
  */
 export default function Sessions({ userAvgSessions }) {
 
-    /**
-     * Day as number from data are changing for letters
-     */
-    const days = { 1: 'L', 2: 'M', 3: 'M', 4: 'J', 5: 'V', 6: 'S', 7: 'D' };
-    const formatDate = (item) => days[item];
     return (
         <div style={{ margin: '0', paddingBottom: '20px' }}>
             <div style={{
@@ -30,7 +25,7 @@ export default function Sessions({ userAvgSessions }) {
 
             <LineChart width={181} height={88} data={userAvgSessions.sessions}>
                 <Tooltip cursor={<CustomCursor />} content={<CustomTooltip />} wrapperStyle={{ outline: 'none' }} />
-                <XAxis dy={9} style={{ fill: '#FFFFFF' }} tickFormatter={formatDate} tickLine={false} dataKey="day" axisLine={false} />
+                <XAxis dy={9} style={{ fill: '#FFFFFF' }} tickFormatter={userAvgSessions} tickLine={false} dataKey="day" axisLine={false} />
                 <Line dot={false} type={"monotone"} dataKey="sessionLength" stroke="#ffffff" strokeWidth={2} />
             </LineChart>
         </div>
@@ -58,12 +53,14 @@ const CustomTooltip = ({ active, payload }) => {
     return null;
 };
 
-/* Todo if time */
-const CustomCursor = () => {
+/** 
+ * Custom component rendering a personalized cursor
+ */
+const CustomCursor = ({ points }) => {
     return (
-        <Rectangle />
-    );
-};
+        <rect x={points[0].x} y="0" height="100%" width="100%" fill="rgba(0, 0, 0, 0.1)"></rect>
+    )
+}
 
 
 Sessions.propTypes = {
