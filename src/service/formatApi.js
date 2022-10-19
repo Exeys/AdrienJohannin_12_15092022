@@ -4,12 +4,24 @@
 class FormatApi {
 
     /**
+     * Return the formated response for activity, converting dates to digit
+     * @param {Object} data 
+     * @returns {Object}
+     */
+    formatActivity(data) {
+        console.log(data)
+        data.sessions.map((item) => (item.day = item.day.split("-")[2][1]))
+        console.log(data)
+        return data;
+
+    }
+
+    /**
      * Return the formated response for average sessions of user
      * @param {Object} data 
      * @returns {Object}
      */
     formatAvgSessions(data) {
-
         const days = { 0: 'L', 1: 'M', 2: 'M', 3: 'J', 4: 'V', 5: 'S', 6: 'D' };
 
         data.sessions.map((item, i) => (item.day = days[i]))

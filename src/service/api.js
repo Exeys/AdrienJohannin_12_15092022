@@ -38,7 +38,7 @@ class Api {
     async getUserActivity(id) {
         if (!this.mocked) {
             const response = await axios.get(this.baseURL + id + '/activity')
-            return response.data.data
+            return this.FormatApi.formatActivity(response.data.data)
         }
         return USER_ACTIVITY
     }

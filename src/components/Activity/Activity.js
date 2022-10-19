@@ -30,7 +30,7 @@ export default function Activity({ userActivity }) {
                         height={140}
                         data={userActivity.sessions}>
                         <CartesianGrid strokeDasharray="3 3" vertical={false} />
-                        <XAxis dataKey="day" dy={16} tickLine={false} tickFormatter={day => day.split("-")[2][1]} />
+                        <XAxis dataKey="day" dy={16} tickLine={false} />
                         <YAxis yAxisId="right" dataKey="kilogram" dx={25} orientation="right" domain={['dataMin - 1', 'dataMax + 1']} tickLine={false} interval={1} />
                         <YAxis hide={true} yAxisId="left" dataKey="calories" dx={25} orientation="left" domain={['dataMin - 100', 'dataMax + 100']} tickLine={false} />
                         <Tooltip content={<CustomTooltip />} cursor={{ fill: "#C4C4C480" } } wrapperStyle={{outline:'none'}} />
